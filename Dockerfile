@@ -16,7 +16,7 @@ RUN wget https://apt.llvm.org/llvm-snapshot.gpg.key && \
 # package requires it. The bug report https://llvm.org/PR43035 explains the
 # issue and the solution. The workaround that was taken instead is insufficient.
 # Use a dummy file to silence the error:
-#RUN touch /usr/lib/llvm-9/bin/yaml-bench
+RUN touch /usr/lib/llvm-9/bin/yaml-bench
 
 COPY CMakeLists.txt /workspace/CMakeLists.txt
 
