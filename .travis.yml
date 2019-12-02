@@ -1,0 +1,9 @@
+dist: xenial
+language: c++
+
+services:
+  - docker
+
+script:
+  - docker pull weliveindetail/apt-llvm-9-dev-repro:broken
+  - docker run weliveindetail/apt-llvm-9-dev-repro:broken
